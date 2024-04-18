@@ -1,0 +1,178 @@
+header.fondo-cabeza {
+    background-image: none;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+footer {
+
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+div.zona-ds {
+    grid-row: 1;
+
+    border-top: 4px solid rgba(255, 255, 255, 0.5);
+    border-bottom: 4px solid rgba(255, 255, 255, 0.5);
+
+}
+
+div.fondo-personal {
+    background-image: url("../img/Personal/f2.jpg");
+    background-size: cover;
+
+    background-repeat: no-repeat;
+    background-position: top;
+
+    background-attachment:scroll;  
+}
+
+
+
+div.contenedor {
+    color: white;
+
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+}
+
+h1.p {
+    font-weight: 600;
+    font-size: 80px;
+}
+
+h2.p {
+    font-weight: 100;
+    margin-top: 0;
+}
+
+/*__________________ Disposicion __________________*/
+
+.contenedor-general {
+    background-color: white;
+
+    display: grid;
+    grid-template-rows: auto auto auto;
+    gap: 0px;
+}
+
+header {
+    grid-row: 1;
+}
+
+main {
+    grid-row: 2;
+    height: 1000px;
+}
+
+footer {
+    grid-row: 3;
+}
+
+
+/*______________________ ANIMACION ________________________________ */
+
+main {
+    overflow: hidden;
+    /* Para ocultar el desbordamiento */
+    /* position: relative; */
+    /* Importante para posicionar correctamente el contenedor interno */
+}
+
+div.contenedor {
+
+    /* Para posicionar el contenedor interno */
+    animation: desplazamiento 50s linear infinite;
+    /* Animación de desplazamiento */
+}
+
+div.contenedor p:nth-child(2) {
+    transform: translateY(50%);
+}
+
+
+@keyframes desplazamiento {
+    0% {
+        transform: translateY(0%);
+    }
+
+    50% {
+        transform: translateY(-50%);
+        /* Desplazamiento hacia arriba */
+    }
+
+    100% {
+        transform: translateY(-100%);
+        /* Continúa desplazándose hacia arriba */
+    }
+}
+
+__________________________________________________________________________________________________
+
+/*__________________ Disposicion __________________*/
+
+.contenedor-general {
+    background-color: white;
+    display: grid;
+    grid-template-rows: auto auto auto;
+    gap: 0px;
+}
+
+header {
+    grid-row: 1;
+    padding: 20px;
+}
+
+main {
+    grid-row: 2;
+    padding: 20px;
+}
+
+footer {
+    grid-row: 3;
+    padding: 20px;
+}
+
+/*______________________ ANIMACION ________________________________ */
+
+main {
+    overflow: hidden;
+}
+
+div.contenedor {
+    animation: desplazamiento 50s linear infinite;
+}
+
+div.contenedor p:nth-child(2) {
+    transform: translateY(50%);
+}
+
+@keyframes desplazamiento {
+    0% {
+        transform: translateY(0%);
+    }
+
+    50% {
+        transform: translateY(-50%);
+    }
+
+    100% {
+        transform: translateY(-100%);
+    }
+}
+
+/*__________________ Estilos de texto responsivos __________________*/
+
+h1.p {
+    font-weight: 600;
+    font-size: 5vw; /* Tamaño de fuente relativo al ancho de la ventana */
+    margin: 0;
+}
+
+h2.p {
+    font-weight: 100;
+    font-size: 3vw; /* Tamaño de fuente relativo al ancho de la ventana */
+    margin-top: 0;
+}
+
+/* Otros estilos responsivos */
